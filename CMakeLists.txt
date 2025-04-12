@@ -60,4 +60,6 @@ else ()
     target_link_libraries(${package} PkgConfig::LibGit2)
 endif ()
 
-include(InstallRules)
+if (NOT BUNDLE_LIBGIT2)
+    include(InstallRules)
+endif()
